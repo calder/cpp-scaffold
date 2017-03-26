@@ -1,6 +1,6 @@
 #include "test/util.h"
 
-std::unique_ptr<std::map<std::string, Test*>> Test::sTestMap;
+static std::unique_ptr<std::map<std::string, Test*>> sTestMap;
 
 std::map<std::string, Test*>& Test::TestMap() {
   if (!sTestMap) {

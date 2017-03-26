@@ -39,7 +39,6 @@ private:
   }
 
   static std::map<std::string, Test*>& TestMap();
-  static std::unique_ptr<std::map<std::string, Test*>> sTestMap;
 
   const std::string mName;
   const std::function<void()> mFunc;
