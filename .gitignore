@@ -1,3 +1,6 @@
 *.out
+.cache
+__pycache__
+
 executable
-run_tests
+run_unit_tests
