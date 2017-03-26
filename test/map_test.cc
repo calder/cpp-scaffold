@@ -2,6 +2,6 @@
 
 #include "test/util.h"
 
-TEST(FooReturns3, [](){
+TEST(FooReturns3) {
   assert(foo() == 3);
-});
+}
