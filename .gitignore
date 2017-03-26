@@ -1,1 +1,3 @@
 *.out
+executable
+run_tests

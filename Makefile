@@ -1,11 +1,13 @@
 CC := clang++ -std=c++14 -I .
 
-src_files := $(wildcard src/**.cc)
+executable_name := executable
+main_file := src/main.cc
+src_files := $(filter-out $(main_file), $(wildcard src/**.cc))
 test_files := $(wildcard test/**.cc)
 
-default: test
+build: $(src_files)
+	$(CC) -o $(executable_name) $(src_files) $(main_file)
 
 test: $(src_files) $(test_files)
-	$(CC) -g -o test.out \
-	  -pthread -lgmock -lgmock_main \
-	  $(src_files) $(test_files)
+	$(CC) -o run_tests $(src_files) $(test_files) \
+	  -g -pthread -lgmock -lgmock_main
