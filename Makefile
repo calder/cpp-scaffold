@@ -1,4 +1,4 @@
-CC := clang++ -std=c++14 -I .
+CC := clang++ -std=c++14 -I . -g
 
 executable := executable
 test_executable := run_tests
@@ -14,4 +14,4 @@ build: $(src_files) $(main_file)
 
 test: $(src_files) $(test_files)
 	$(CC) -o $(test_executable) $(src_files) $(test_files) \
-	  -g -pthread -lgmock -lgmock_main
+	  -pthread -ldw -lgmock -lgmock_main
