@@ -6,4 +6,6 @@ test_files := $(wildcard test/**.cc)
 default: test
 
 test: $(src_files) $(test_files)
-	$(CC) -o test.out -g $(src_files) $(test_files)
+	$(CC) -g -o test.out \
+	  -pthread -lgmock -lgmock_main \
+	  $(src_files) $(test_files)

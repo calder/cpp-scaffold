@@ -1,7 +1,7 @@
+#include <gtest/gtest.h>
+
 #include "src/map.h"
 
-#include "test/util.h"
-
-TEST(FooReturns3) {
-  assert(foo() == 3);
+TEST(MapTest, FooReturns3) {
+  ASSERT_EQ(3, foo());
 }
