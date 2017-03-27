@@ -2,10 +2,11 @@ CC := clang++ -std=c++14 -I . -g -Werror -Wall
 
 executable := executable
 main_file := src/main.cc
-src_files := $(filter-out $(main_file), $(wildcard src/**.cc))
+src_files := $(filter-out $(main_file), $(wildcard src/*.cc src/**/*.cc))
 
-unit_test_files := $(wildcard test/**.cc)
-integration_test_files := $(wildcard tests/**.py)
+unit_test_files := $(wildcard test/*.cc test/**/*.cc)
+integration_test_files := $(wildcard test/*.py test/**/*.py)
+
 
 $(executable): $(src_files) $(main_file)
 	$(CC) -O3 -o $@ $(src_files) $(main_file)

@@ -10,7 +10,7 @@ def exec(*args):
 def test_default():
   assert exec() == "Hello world!\n"
 
-@pytest.mark.parametrize("expected_file", glob.glob("test/samples/*.expected"))
+@pytest.mark.parametrize("expected_file", glob.glob("test/cases/*.expected"))
 def test_with_arg(expected_file):
   expected = open(expected_file).read()
   dir = expected_file.split(".")[0]

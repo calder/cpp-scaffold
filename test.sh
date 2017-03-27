@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILES='**/*.cc **/*.h **/*.py test/samples Makefile'
+FILES='**/*.cc **/*.h **/*.py test/cases Makefile'
 
 while true; do
   inotifywait -r -e close_write --format 'Detected change: %w%f' $FILES \

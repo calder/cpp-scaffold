@@ -5,6 +5,6 @@
 using testing::ElementsAre;
 
 TEST(UtilTest, ListFiles) {
-  EXPECT_THAT(listFiles("test/samples/test1"),
+  EXPECT_THAT(listFiles("test/cases/test1"),
               ElementsAre("bar", "baz", "foo"));
 }
