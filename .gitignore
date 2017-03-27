@@ -3,5 +3,5 @@
 __pycache__
 
 /executable
-/debug
+/executable_debug
 /unit_tests
