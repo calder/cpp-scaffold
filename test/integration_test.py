@@ -4,7 +4,7 @@ import os
 import subprocess
 
 def exec(*args):
-  stdout = subprocess.check_output(["./executable_debug", *args])
+  stdout = subprocess.check_output(["./executable", *args])
   return stdout.decode("unicode_escape")
 
 def test_default():
